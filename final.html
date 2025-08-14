@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry ❤️ - Thank You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .final-message {
+      font-size: 1.7em;
+      margin: 20px 0;
+      animation: fadeIn 2s ease forwards;
+      padding: 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .option-btn {
+      font-size: 1em;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #4a4a4a; /* Changed to dark gray */
+      color: white;
+      transition: all 0.3s ease;
+      margin: 10px;
+      display: inline-block;
+      animation: slideUp 2.5s ease;
+    }
+
+    .option-btn:hover {
+      transform: scale(1.05);
+      background-color: #333333; /* Darker gray on hover */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .special-btn {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      border: 2px solid #4a4a4a;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: #f5f5f5; /* Light background */
+      color: #4a4a4a; /* Dark text */
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 20px;
+      display: inline-block;
+      animation: slideUp 2.5s ease;
+    }
+
+    .special-btn:hover {
+      transform: scale(1.1);
+      background-color: #e0e0e0; /* Slightly darker on hover */
+      color: #333333;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .sparkles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      animation: sparkle 2s linear infinite;
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      50% { opacity: 1; transform: translateY(-50px) scale(1); }
+      100% { opacity: 0; transform: translateY(-100px) scale(0); }
+    }
+
+    .options {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkles" id="sparkles"></div>
+  
+  <div class="final-message">  
+
+    Thank you for going through this with me. I know that I have crossed lines, acted awkwardly, and made you uncomfortable in several ways — from my jokes, my questions, and my actions during our meeting. <br>
+
+    I take full responsibility for all of it. I understand why you felt the way you did, and I’m genuinely sorry for any discomfort or unease I caused.  <br>
+
+    I won’t expect anything from you, and I just wanted to express my apology properly. I’ll make sure to learn from this and do better in the future.  <br
+    <br>Maybe it is final goodbye.<br>
+  </div>
+  
+  <div class="options">
+    <button class="option-btn" onclick="fileComplaint()">File Police Complaint Against Me</button>
+    <button class="option-btn" onclick="reportToParents()">Report Me to My Parents</button>
+    <button class="option-btn" onclick="blockMe()">Block Me Everywhere</button>
+    <button class="option-btn" onclick="unblockMe()">Unblock Me and message me</button>
+    <button class="option-btn" onclick="callMe()">Call Me, Maybe</button>
+    <button class="special-btn" onclick="redirectToFacts()">Something I don't know what should I name</button>
+  </div>
+
+  <script>
+    // Create sparkle effects
+    function createSparkles() {
+      const sparklesContainer = document.getElementById('sparkles');
+      setInterval(() => {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() * 2 + 's';
+        sparklesContainer.appendChild(sparkle);
+        
+        setTimeout(() => {
+          sparkle.remove();
+        }, 2000);
+      }, 300);
+    }
+
+    function fileComplaint() {
+      alert('Aavu na karish. Nai karu tane heran. Aa last time che. Aana thi vadhare himmat nathi mari.🙇🏻‍♂️');
+    }
+
+    function reportToParents() {
+      alert('Aavu pan na karish. 🙇🏻‍♂️');
+    }
+
+    function blockMe() {
+      alert('Sacche? 🥺 Thik che em pan aana pachi mari pase kai che nai kehva and karva mate 😔');
+    }
+
+    function unblockMe() {
+      alert("Wasn't expecting this, but thanks for forgiving me. 🥲");
+    }
+
+    function callMe() {
+      alert('Hehe mane pan khabar che aa tu nai kare. After all, I’m the one who messed up. 😢');
+    }
+
+    function redirectToFacts() {
+      window.location.href = 'something-i-dont-know.html';
+    }
+
+    // Start sparkle effect
+    createSparkles();
+  </script>
+</body>
+</html>

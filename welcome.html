@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry ❤️ - Welcome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(45deg, #fdeff9, #ecf0f3, #e6f3ff, #fff2e6);
+      background-size: 400% 400%;
+      animation: gradientFlow 6s ease infinite;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      margin: 20px 0 40px 0;
+      opacity: 0.8;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .start-btn {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      color: white;
+      transition: all 0.3s ease;
+      animation: slideUp 2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .start-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 0.8; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>I'm Sorry 😬</h1>
+  
+  <div class="subtitle">
+    I know our meeting didn’t go as it should have — and that is on me.  
+    I said and did things that crossed the line, and for that I’m genuinely sorry.
+    I'm not sure if this is going to work, help, or just make things worse.
+    But I wanted to try something different.
+    <br><br>
+    I know this is a bit silly, but I made this little quiz as a light way to own up to each moment, one by one.  
+    No pressure, no expectations — just me taking responsibility and hoping you can at least smile once or twice while going through it. 🙂 (I know I used this smiley which you don't like.)
+  </div>
+  <button class="start-btn" onclick="startJourney()">Begin</button>
+
+  <script>
+    function startJourney() {
+      // Clear any existing session data
+      sessionStorage.clear();
+      // Start the journey
+      window.location.href = 'page1.html';
+    }
+  </script>
+</body>
+</html>

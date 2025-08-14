@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry ❤️ - Question 1</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdeff9, #ecf0f3);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      animation: slideDown 0.8s ease;
+    }
+
+    .question {
+      font-size: 1.5em;
+      margin: 30px 0;
+      animation: slideUp 1s ease;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      animation: slideUp 1.2s ease;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .yes {
+      background-color: #c3f584;
+      color: #2d5016;
+    }
+
+    .no {
+      background-color: #ffb3c6;
+      color: #5d1a2b;
+    }
+
+    .progress {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress">1/9</div>
+  <h1>First Impressions Matter</h1>
+  <div class="question">I showed up dressed super casually — like I was going to the grocery store instead of meeting you.</div>
+  <div class="question">Thoduk to ajeeb hatu. Tu pan mane che aa...</div>
+  
+  <div class="buttons">
+    <button class="yes" onclick="goToResponse('yes', 1)">Bekaar look hato ✅</button>
+    <button class="no" onclick="goToResponse('no', 1)">Thik thak hatu, chaale</button>
+  </div>
+
+  <script>
+    function goToResponse(answer, questionNum) {
+      // Store the answer for the response page
+      sessionStorage.setItem(`q${questionNum}_answer`, answer);
+      // Navigate to the response page
+      window.location.href = `response${questionNum}.html`;
+    }
+  </script>
+</body>
+</html>

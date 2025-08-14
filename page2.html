@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry ❤️ - Question 2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff2e6, #f0e6ff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      animation: slideDown 0.8s ease;
+    }
+
+    .question {
+      font-size: 1.5em;
+      margin: 30px 0;
+      animation: slideUp 1s ease;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      animation: slideUp 1.2s ease;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .yes {
+      background-color: #c3f584;
+      color: #2d5016;
+    }
+
+    .no {
+      background-color: #ffb3c6;
+      color: #5d1a2b;
+    }
+
+    .progress {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress">2/9</div>
+  <h1>Chocolate and e pan 🫠 Kitkat</h1>
+  <div class="question">I showed up there holding a single chocolate like some lost kid at a school play.</div>
+  
+  <div class="question">Bau j embarrassing feel thatutu.</div>
+  
+  <div class="buttons">
+    <button class="yes" onclick="goToResponse('yes', 2)">Haan, ketlu kharab lagtutu e 😠</button>
+    <button class="no" onclick="goToResponse('no', 2)">Nahi, thik chhe</button>
+  </div>
+
+  <script>
+    function goToResponse(answer, questionNum) {
+      sessionStorage.setItem(`q${questionNum}_answer`, answer);
+      window.location.href = `response${questionNum}.html`;
+    }
+  </script>
+</body>
+</html>

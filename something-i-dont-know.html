@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facts About Me</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff8dc, #ffe4e6);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+      color: #333;
+      display: flex;
+      justify-content: flex-start; /* Changed alignment */
+      align-items: flex-start; /* Changed alignment */
+      height: 100vh;
+      flex-direction: column;
+      text-align: left; /* Changed text alignment */
+      padding: 20px;
+    }
+
+    .facts {
+      font-size: 1.5em;
+      margin: 20px 0;
+      padding: 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .special-btn {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      border: 2px solid #4a4a4a;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: #f5f5f5; /* Light background */
+      color: #4a4a4a; /* Dark text */
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 20px auto; /* Center the button */
+      display: block; /* Center alignment requires block display */
+      animation: slideUp 2.5s ease;
+    }
+
+    .special-btn:hover {
+      transform: scale(1.1);
+      background-color: #e0e0e0; /* Slightly darker on hover */
+      color: #333333;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="facts">
+    <h2>Don't know what should I name it:</h2>
+    <ol>
+      <li><b>Insecurities:</b> <br>You asked me about my insecurities. My biggest fear is losing someone/something I love. My family, future family, job, friends or myself.</li>
+      <li><b>Shaant pani oonda:</b> <br>I don't have any other side. I am just a simple common guy. Or maybe a bit different but I don't have any dark side.</li>
+      <li><b>Expectations:</b> <br>I know maybe I was expecting too much. Don't know su thayu. Again I felt like I am not able to identify what is going on in your mind.</li>
+      <li><b>Pushing Boundaries:</b> <br>Maybe I was pushing too much. But I just wanted to know you better and see you smile / laugh. Tu kai rite joy handle kre che. Tu kai rite sadness handle kare che. Tu kai rite gusso handle kare che. </li>
+      <li><b>Observations:</b> <br>Tame loko jyare ghare avyata tyare khali ek var tane sharmata joiti. I can be totally wrong kem k tu tari mummy jode kaik dal vada nu discuss kartiti and I heard it and just looked at you.</li>
+      <li><b>Cluelessness:</b> <br>Bas avu ghanu badhu mare janvutu but badhu undhi direction ma jatu rahyu. Sorry for being so clueless.</li>
+      <li><b>Stalking:</b><br>I was not stalking you. That was a light joke. Maybe that was also disrespectful.</li>
+        <li><b>Confusion:</b><br>I often find myself confused about how to act around you. I just want to make people around me happy, but sometimes I don't know how.</li>
+        <li><b>Blocking stage:</b><br>I understand that you blocked me for a good reason. It felt really cold, and honestly, I'm still struggling to process it — not just because you rejected me, but because we had good conversations before (or at least I thought so). This time, you didn’t even want to see my response, which makes me realize just how badly I must have messed up. But I get it. I probably deserve that.</li>
+
+    </ol>
+    <button class="special-btn" onclick="redirectToPoorva()">What is Poorva for me</button>
+
+    <script>
+      function redirectToPoorva() {
+        window.location.href = 'poorva-for-me.html';
+      }
+    </script>
+  </div>
+</body>
+</html>
