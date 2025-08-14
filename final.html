@@ -12,12 +12,14 @@
       animation: gradientShift 4s ease infinite;
       color: #333;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start; /* Adjusted to prevent top cropping */
+      align-items: flex-start; /* Adjusted to prevent top cropping */
       height: 100vh;
       flex-direction: column;
       text-align: center;
       padding: 20px;
+      box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     .final-message {
@@ -28,6 +30,8 @@
       background: rgba(255,255,255,0.2);
       border-radius: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      max-width: 90%; /* Ensure content fits within the viewport */
+      word-wrap: break-word; /* Break long words to prevent overflow */
     }
 
     .option-btn {
